@@ -15,9 +15,15 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
+            $table->string('title' , 50);
+            $table->text('body'); 
             $table->timestamps();
         });
     }
+
+// id
+// title
+// body   
 
     /**
      * Reverse the migrations.
