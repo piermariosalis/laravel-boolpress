@@ -9,7 +9,7 @@
 @section('vuejs')
 <div id="app">
 
-<example-component></example-component>
+<article-component></article-component>
 </div>
 
 @endsection

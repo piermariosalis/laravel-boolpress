@@ -22,6 +22,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('articles', function () {
     return response()->json([
         'success' => true,
-        'data' => App\Article::all()
+        'datacontent' => App\Article::all()
     ], 200);
 });
