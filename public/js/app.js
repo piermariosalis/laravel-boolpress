@@ -1971,11 +1971,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      articles: ""
+    };
+  },
   mounted: function mounted() {
+    var _this = this;
+
     console.log('Component mounted.');
     axios.get('api/articles').then(function (response) {
-      console.log(response.data.datacontent);
+      // console.log(response.data.datacontent);
+      _this.articles = response.data.datacontent;
     })["catch"](function (error) {
       console.log('error');
     });
@@ -37669,28 +37679,36 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c(
+        "div",
+        { staticClass: "col-md-8" },
+        _vm._l(_vm.articles, function(article) {
+          return _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-header" }, [
-              _vm._v("Article Title")
+              _vm._v(
+                "\n                    " +
+                  _vm._s(article.title) +
+                  "\n                "
+              )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "card-body" })
+            _c("div", { staticClass: "card-body" }, [
+              _vm._v(
+                "\n                    " +
+                  _vm._s(article.body) +
+                  "\n                "
+              )
+            ])
           ])
-        ])
-      ])
+        }),
+        0
+      )
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
