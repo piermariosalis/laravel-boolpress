@@ -15,4 +15,8 @@ class PageController extends Controller
     public function contacts(){
         return view('pages.contacts');
     }
+    public function api()
+    {
+        return view('api.articles');
+    }
 }
