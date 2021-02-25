@@ -37,3 +37,9 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+    .card {
+        margin: 30px 0;
+    }
+</style>
